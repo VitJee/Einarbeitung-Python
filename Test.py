@@ -1,1 +1,7 @@
-print("Test Commit")
+def vithu():
+    return
+
+def dominik():
+    return
+
+#Main game:
