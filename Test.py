@@ -1,7 +1,7 @@
-def vithu():
+def vithu(): #TicTacToe
     return
 
-def dominik():
+def dominik(): #RandomNumberGuesser
     return
 
 #Main game:
