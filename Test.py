@@ -41,9 +41,9 @@ while (True):
         "um das jeweilige Projekt anzuschauen:\n\n" +
         "(1) Tic Tac Toe\n" +
         "(2) Random Number Guesser\n" + 
-        "(3) Beenden")
+        "(3) Beenden\n")
 
-    userInput = int(input())
+    userInput = int(input("Eingabe: "))
 
     if (userInput == 1):
         x = TicTacToe()
@@ -60,5 +60,4 @@ while (True):
         print("\033[0;37;40m\n")
         os.system('cls')
         continue
-
-    break
+    continue
