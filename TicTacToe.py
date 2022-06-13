@@ -73,7 +73,7 @@ class TicTacToe:
                     aktuellerSpieler = 'o'
                 else:
                     aktuellerSpieler = 'x'
-            
+
             if (self.resultat() == 'x'):
                 os.system('cls')
                 print("Der Spieler x hat gewonnen!")
@@ -82,6 +82,11 @@ class TicTacToe:
             elif (self.resultat() == 'o'):
                 os.system('cls')
                 print("Der Spieler o hat gewonnen!")
+                time.sleep(1.5)
+                break
+            elif (self.resultat() == 'a'):
+                os.system('cls')
+                print("Es ist unentschieden!")
                 time.sleep(1.5)
                 break
         pass
@@ -112,5 +117,7 @@ class TicTacToe:
                 return 'x'
             elif (self.spielFeld[2] == 'o'):
                 return 'o'
+        elif (self.spielFeld[0] != ' ' and self.spielFeld[1] != ' ' and self.spielFeld[2] != ' ' and self.spielFeld[3] != ' ' and self.spielFeld[4] != ' ' and self.spielFeld[5] != ' ' and self.spielFeld[6] != ' ' and self.spielFeld[7] != ' ' and self.spielFeld[8] != ' '):
+            return 'a'
         else:
             return ' '
