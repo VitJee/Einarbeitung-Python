@@ -117,6 +117,21 @@ class TicTacToe:
                 return 'x'
             elif (self.spielFeld[2] == 'o'):
                 return 'o'
+        elif (self.spielFeld[0] == self.spielFeld[3] and self.spielFeld[0] == self.spielFeld[6]):
+            if (self.spielFeld[0] == 'x'):
+                return 'x'
+            elif (self.spielFeld[0] == 'o'):
+                return 'o'
+        elif (self.spielFeld[1] == self.spielFeld[4] and self.spielFeld[1] == self.spielFeld(7)):
+            if (self.spielFeld[1] == 'x'):
+                return 'x'
+            elif (self.spielFeld[1] == 'o'):
+                return 'o'
+        elif (self.spielFeld[2] == self.spielFeld[5] and self.spielFeld[2] == self.spielFeld[8]):
+            if (self.spielFeld[2] == 'x'):
+                return 'x'
+            elif (self.spielFeld[2] == 'o'):
+                return 'o'
         elif (self.spielFeld[0] != ' ' and self.spielFeld[1] != ' ' and self.spielFeld[2] != ' ' and self.spielFeld[3] != ' ' and self.spielFeld[4] != ' ' and self.spielFeld[5] != ' ' and self.spielFeld[6] != ' ' and self.spielFeld[7] != ' ' and self.spielFeld[8] != ' '):
             return 'a'
         else:
