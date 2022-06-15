@@ -23,8 +23,8 @@ class TicTacToe:
                 "  -+-+-\n" +
                 "B " + self.spielFeld[3] + "|" + self.spielFeld[4] + "|" + self.spielFeld[5] + "\n" +
                 "  -+-+-\n" +
-                "C " + self.spielFeld[6] + "|" +
-                self.spielFeld[7] + "|" + self.spielFeld[8] + "\n"
+                "C " + self.spielFeld[6] + "|" + self.spielFeld[7] + "|" + self.spielFeld[8] + "\n" +
+                "Spieler " + self.aktuellerSpieler + " ist an der Reihe\n"
             )
 
             if (self.benutzerEingabe()):
@@ -56,7 +56,7 @@ class TicTacToe:
         pass
 
     def benutzerEingabe(self):
-        eingabe = str(input())
+        eingabe = str(input("Deine Auswahl: "))
         if (eingabe == "A1" or eingabe == "a1"):
             if (self.spielFeld[0] == ' '):
                 self.spielFeld[0] = self.aktuellerSpieler
