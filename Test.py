@@ -14,26 +14,39 @@ def dominik():  # RandomNumberGuesser
     win = False
     counter = 0
     while win == False:
-        myGuessNumber = input("Enter a random Number between 0-100: ")
+        myGuessNumber = input("Geben Sie eine Zahl zwischen 0-100 ein: ")
         counter += 1
-        
+
+        try:
+            int(myGuessNumber)
+        except:
+            continue
+
         if randomNumber == int(myGuessNumber):
-            print("You are the winner!!!")
-            print("You had needed ", counter, " moves.")
+            print("Du bist der Gewinner!!!")
+            print("Du hast ", counter, " Versuche gebraucht.")
             win = True
             time.sleep(5)
             break
         else:
             if randomNumber < int(myGuessNumber):
-                print("Your choose is to high. You must give a lower number!")
+                print("Deine Eingabe ist zu gross. Du musst eine kleinere Zahl eingeben!")
             else:
-                print("Your choose is to low. You must give a higher number!")
-        
-                
+                print("Deine Eingabe ist zu klein. Du musst eine grössere Zahl eingeben!")
+
+
 def vithu():  # TicTacToe
-    print("Vithu")
+    x = TicTacToe()
+    x.test()
     return
 
+def fehlerMeldung():
+    os.system('cls')
+    print("\033[1;31;40m\n")
+    print("Ein Fehler ist aufgetreten")
+    time.sleep(1.5)
+    print("\033[0;37;40m\n")
+    os.system('cls')
 
 # Main game:
 while (True):
@@ -46,21 +59,18 @@ while (True):
         "(2) Random Number Guesser\n" + 
         "(3) Beenden\n")
 
-    userInput = int(input("Eingabe: "))
+    try:
+        userInput = int(input("Eingabe: "))
+    except:
+        fehlerMeldung()
+        continue
 
     if (userInput == 1):
-        x = TicTacToe()
-        x.test()
+        vithu()
     elif (userInput == 2):
         dominik()
     elif (userInput == 3):
         exit()
     else:
-        os.system('cls')
-        print("\033[1;31;40m\n")
-        print("Ein Fehler ist aufgetreten")
-        time.sleep(1.5)
-        print("\033[0;37;40m\n")
-        os.system('cls')
+        fehlerMeldung()
         continue
-    continue
