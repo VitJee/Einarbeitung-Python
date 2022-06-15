@@ -15,12 +15,13 @@ def dominik():  # RandomNumberGuesser
     counter = 0
     while win == False:
         myGuessNumber = input("Enter a random Number between 0-100: ")
-        counter = +1
+        counter += 1
         
         if randomNumber == int(myGuessNumber):
             print("You are the winner!!!")
             print("You had needed ", counter, " moves.")
             win = True
+            time.sleep(5)
             break
         else:
             if randomNumber < int(myGuessNumber):
