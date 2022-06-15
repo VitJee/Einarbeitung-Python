@@ -10,12 +10,13 @@ from TicTacToe import TicTacToe
 def dominik():  # RandomNumberGuesser
 
     import random
-    randomNumber = r.Next(0, 100)
+    randomNumber = random.randint(0, 100)
     win = False
     counter = 0
     while win == False:
-        myGuessNumber = input("Enter a random Number between 0-100")
+        myGuessNumber = input("Enter a random Number between 0-100: ")
         counter = +1
+        
         if randomNumber == int(myGuessNumber):
             print("You are the winner!!!")
             print("You had needed ", counter, " moves.")
@@ -25,8 +26,9 @@ def dominik():  # RandomNumberGuesser
             if randomNumber < int(myGuessNumber):
                 print("Your choose is to high. You must give a lower number!")
             else:
-                print("Your choose is to low. You mus give a higher number!")
-
+                print("Your choose is to low. You must give a higher number!")
+        
+                
 def vithu():  # TicTacToe
     print("Vithu")
     return
